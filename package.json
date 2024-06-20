@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "watch": "tsc -w & ts-alias -w",
-    "dev": "nodemon ./dist/src/index.js",
-    "build": "tsc && tsc-alias",
+    "dev": "node ./dist/src/index.js",
+    "build": "tsc",
     "start": "node dist/src/index.js"
   },
   "dependencies": {
