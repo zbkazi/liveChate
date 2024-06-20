@@ -1,10 +1,10 @@
-import app from "./app";
+import express from "express";
+import { userRouter } from "./routes/userRoute";
 
-// Define port and host
-const port: number = parseInt(process.env.PORT || '4003', 10);
-const host = "0.0.0.0";
+const app = express();
 
-// Start the server
-app.listen(port, host, () => {
-  console.log(`Server is running on port ${port}`);
+app.use("/user", userRouter);
+
+app.listen(5000, () => {
+  console.log("http://localhost:5000");
 });
