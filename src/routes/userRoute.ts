@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { login, logout, signup } from "../controllers/userController";
 
-export const userRouter = Router();
+const router = Router();
 
-userRouter.get("/signup", signup);
-userRouter.get("/login", login);
-userRouter.get("/logout", logout);
+router.get("/", (req, res) => {
+    res.send("<h1>Hello Kazi Byte!, Welcome to Kazi Byte API</h1>");
+});
+
+export default router;
